@@ -69,10 +69,10 @@ export default function YoutubeSection() {
               ) : (
                 <>
                   <h3 className="text-2xl font-bold mb-2" data-testid="text-channel-name">
-                    {channelInfo?.name || 'Squad Adventures'}
+                    {channelInfo?.name || 'VNP Comedians'}
                   </h3>
                   <p className="text-muted-foreground mb-4" data-testid="text-channel-description">
-                    {channelInfo?.description || 'Join us on our crazy adventures, cooking experiments, and friendship moments. New videos every week!'}
+                    {channelInfo?.description || 'Join us on our funny videos That Make you Laugh every day. New videos every day!'}
                   </p>
                   <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-muted-foreground">
                     <span data-testid="text-channel-subscribers">
