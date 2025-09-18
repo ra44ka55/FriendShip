@@ -23,16 +23,14 @@ export default function YoutubeSection() {
   });
 
   const openVideo = (videoId: string) => {
-    window.open(`https://youtube.com/shorts/T9AhkhJohy4?si=RNjoC3ibrqFbkQ2o`, '_blank');
+    window.open(`https://youtube.com/watch?v=${videoId}`, '_blank');
   };
 
   const openChannel = () => {
-    const channelId = import.meta.env.VITE_YOUTUBE_CHANNEL_ID || 'UCYourChannelId';
     window.open(`https://www.youtube.com/@priyanshcomedy95`, '_blank');
   };
 
   const subscribe = () => {
-    const channelId = import.meta.env.VITE_YOUTUBE_CHANNEL_ID || 'UCYourChannelId';
     window.open(`https://www.youtube.com/@priyanshcomedy95?sub_confirmation=1`, '_blank');
   };
 
@@ -40,10 +38,16 @@ export default function YoutubeSection() {
     <section id="youtube" className="py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4" data-testid="text-youtube-title">
+          <h2
+            className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4"
+            data-testid="text-youtube-title"
+          >
             Our YouTube Channel
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="text-youtube-subtitle">
+          <p
+            className="text-lg text-muted-foreground max-w-2xl mx-auto"
+            data-testid="text-youtube-subtitle"
+          >
             Subscribe to follow our comedy in video form - behind the scenes, vlogs, and epic fails included!
           </p>
         </div>
@@ -54,7 +58,7 @@ export default function YoutubeSection() {
             <div className="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
               <i className="fab fa-youtube text-white text-3xl"></i>
             </div>
-            
+
             <div className="flex-1 text-center md:text-left">
               {channelLoading ? (
                 <>
@@ -68,30 +72,37 @@ export default function YoutubeSection() {
                 </>
               ) : (
                 <>
-                  <h3 className="text-2xl font-bold mb-2" data-testid="text-channel-name">
-                    {https://www.youtube.com/@priyanshcomedy95.name || 'VNP Comedians'}
+                  <h3
+                    className="text-2xl font-bold mb-2"
+                    data-testid="text-channel-name"
+                  >
+                    {channelInfo?.name || "Priyansh Comedy"}
                   </h3>
-                  <p className="text-muted-foreground mb-4" data-testid="text-channel-description">
-                    {channelInfo?.description || 'Join us on our funny videos That Make you Laugh every day. New videos every day!'}
+                  <p
+                    className="text-muted-foreground mb-4"
+                    data-testid="text-channel-description"
+                  >
+                    {channelInfo?.description ||
+                      "Welcome to Priyansh Comedy! Funny videos that make you laugh every day."}
                   </p>
                   <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-muted-foreground">
                     <span data-testid="text-channel-subscribers">
                       <i className="fas fa-users mr-1"></i>
-                      {channelInfo?.subscribers || '15.2K'} subscribers
+                      {channelInfo?.subscribers || "15.2K"} subscribers
                     </span>
                     <span data-testid="text-channel-videos">
                       <i className="fas fa-video mr-1"></i>
-                      {channelInfo?.videos || '47'} videos
+                      {channelInfo?.videos || "47"} videos
                     </span>
                     <span data-testid="text-channel-views">
                       <i className="fas fa-eye mr-1"></i>
-                      {channelInfo?.views || '1.2M'} views
+                      {channelInfo?.views || "1.2M"} views
                     </span>
                   </div>
                 </>
               )}
             </div>
-            
+
             <div className="flex gap-3">
               <Button
                 onClick={subscribe}
@@ -130,8 +141,16 @@ export default function YoutubeSection() {
         ) : !videos || videos.length === 0 ? (
           <div className="text-center py-12">
             <i className="fab fa-youtube text-6xl text-muted-foreground mb-4"></i>
-            <h3 className="text-xl font-semibold mb-2" data-testid="text-no-videos">No Videos available</h3>
-            <p className="text-muted-foreground mb-6" data-testid="text-no-videos-subtitle">
+            <h3
+              className="text-xl font-semibold mb-2"
+              data-testid="text-no-videos"
+            >
+              No Videos available
+            </h3>
+            <p
+              className="text-muted-foreground mb-6"
+              data-testid="text-no-videos-subtitle"
+            >
               Check back later for our latest comedy!
             </p>
             <Button
@@ -168,15 +187,25 @@ export default function YoutubeSection() {
                     {formatYoutubeDuration(video.duration)}
                   </span>
                 </div>
-                
+
                 <CardContent className="p-4">
-                  <h4 className="font-semibold mb-2 line-clamp-2" data-testid={`text-video-title-${video.id}`}>
+                  <h4
+                    className="font-semibold mb-2 line-clamp-2"
+                    data-testid={`text-video-title-${video.id}`}
+                  >
                     {video.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground mb-2" data-testid={`text-video-stats-${video.id}`}>
-                    {parseInt(video.viewCount).toLocaleString()} views • {new Date(video.publishedAt).toLocaleDateString()}
+                  <p
+                    className="text-sm text-muted-foreground mb-2"
+                    data-testid={`text-video-stats-${video.id}`}
+                  >
+                    {parseInt(video.viewCount).toLocaleString()} views •{" "}
+                    {new Date(video.publishedAt).toLocaleDateString()}
                   </p>
-                  <p className="text-sm text-muted-foreground line-clamp-2" data-testid={`text-video-description-${video.id}`}>
+                  <p
+                    className="text-sm text-muted-foreground line-clamp-2"
+                    data-testid={`text-video-description-${video.id}`}
+                  >
                     {video.description}
                   </p>
                 </CardContent>
