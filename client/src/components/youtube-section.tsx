@@ -130,7 +130,7 @@ export default function YoutubeSection() {
         ) : !videos || videos.length === 0 ? (
           <div className="text-center py-12">
             <i className="fab fa-youtube text-6xl text-muted-foreground mb-4"></i>
-            <h3 className="text-xl font-semibold mb-2" data-testid="text-no-videos">No videos available</h3>
+            <h3 className="text-xl font-semibold mb-2" data-testid="text-no-videos">No Videos available</h3>
             <p className="text-muted-foreground mb-6" data-testid="text-no-videos-subtitle">
               Check back later for our latest comedy!
             </p>
