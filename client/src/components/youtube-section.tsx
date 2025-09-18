@@ -33,7 +33,7 @@ export default function YoutubeSection() {
 
   const subscribe = () => {
     const channelId = import.meta.env.VITE_YOUTUBE_CHANNEL_ID || 'UCYourChannelId';
-    window.open(`https://www.youtube.com/channel/${channelId}?sub_confirmation=1`, '_blank');
+    window.open(`https://www.youtube.com/@priyanshcomedy95?sub_confirmation=1`, '_blank');
   };
 
   return (
