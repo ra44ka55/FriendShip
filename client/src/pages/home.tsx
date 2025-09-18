@@ -21,7 +21,7 @@ export default function Home() {
           <div className="text-center">
             <div className="flex justify-center items-center space-x-2 mb-6">
               <i className="fas fa-heart text-primary text-2xl"></i>
-              <h3 className="text-2xl font-display font-bold text-foreground">RNP Squa</h3>
+              <h3 className="text-2xl font-display font-bold text-foreground">RNP Squad</h3>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md mx-auto">
               Made with love, laughter, and way too much caffeine. 
