@@ -23,7 +23,7 @@ export default function YoutubeSection() {
   });
 
   const openVideo = (videoId: string) => {
-    window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+    window.open(`https://youtube.com/shorts/T9AhkhJohy4?si=RNjoC3ibrqFbkQ2o`, '_blank');
   };
 
   const openChannel = () => {
@@ -69,7 +69,7 @@ export default function YoutubeSection() {
               ) : (
                 <>
                   <h3 className="text-2xl font-bold mb-2" data-testid="text-channel-name">
-                    {channelInfo?.name || 'VNP Comedians'}
+                    {https://www.youtube.com/@priyanshcomedy95.name || 'VNP Comedians'}
                   </h3>
                   <p className="text-muted-foreground mb-4" data-testid="text-channel-description">
                     {channelInfo?.description || 'Join us on our funny videos That Make you Laugh every day. New videos every day!'}
