@@ -42,7 +42,7 @@ export default function Home() {
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              © 2024 Our Amazing Squad. All memories preserved with care. 💕
+              © 2025 Our Amazing Squad. All memories preserved with care. 💕
             </p>
           </div>
         </div>
