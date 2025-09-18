@@ -44,7 +44,7 @@ export default function YoutubeSection() {
             Our YouTube Channel
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="text-youtube-subtitle">
-            Subscribe to follow our adventures in video form - behind the scenes, vlogs, and epic fails included!
+            Subscribe to follow our comedy in video form - behind the scenes, vlogs, and epic fails included!
           </p>
         </div>
 
@@ -132,7 +132,7 @@ export default function YoutubeSection() {
             <i className="fab fa-youtube text-6xl text-muted-foreground mb-4"></i>
             <h3 className="text-xl font-semibold mb-2" data-testid="text-no-videos">No videos available</h3>
             <p className="text-muted-foreground mb-6" data-testid="text-no-videos-subtitle">
-              Check back later for our latest adventures!
+              Check back later for our latest comedy!
             </p>
             <Button
               onClick={openChannel}
