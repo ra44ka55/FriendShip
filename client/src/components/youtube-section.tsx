@@ -28,7 +28,7 @@ export default function YoutubeSection() {
 
   const openChannel = () => {
     const channelId = import.meta.env.VITE_YOUTUBE_CHANNEL_ID || 'UCYourChannelId';
-    window.open(`https://www.youtube.com/channel/${channelId}`, '_blank');
+    window.open(`https://www.youtube.com/@priyanshcomedy95`, '_blank');
   };
 
   const subscribe = () => {
