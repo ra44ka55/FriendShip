@@ -76,14 +76,14 @@ export default function YoutubeSection() {
                     className="text-2xl font-bold mb-2"
                     data-testid="text-channel-name"
                   >
-                    {channelInfo?.name || "Priyansh Comedy"}
+                    {channelInfo?.name || "PNS Comedy"}
                   </h3>
                   <p
                     className="text-muted-foreground mb-4"
                     data-testid="text-channel-description"
                   >
                     {channelInfo?.description ||
-                      "Welcome to Priyansh Comedy! Funny videos that make you laugh every day."}
+                      "Welcome to PNS Comedy! Funny videos that make you laugh every day."}
                   </p>
                   <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-muted-foreground">
                     <span data-testid="text-channel-subscribers">
